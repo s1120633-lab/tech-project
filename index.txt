@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奶茶食刻 | 個人首頁</title>
+    <!-- 使用 Tailwind CSS 讓設計更快速，並確保響應式設計 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts：使用圓潤可愛的 Inter 字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* 定義奶茶色調的客製化顏色 */
+        :root {
+            --color-milky-tea: #EADBC8;
+            --color-caramel: #A98467;
+            --color-cream: #F8F4E1;
+            --color-text: #4a4a4a;
+        }
+
+        /* 將字體和背景應用到 body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-milky-tea);
+            color: var(--color-text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        /* 內容區塊的動態淡入效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        /* 按鈕的陰影效果，增加立體感 */
+        .btn {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+        }
+
+        /* 按鈕的滑入/點擊動態效果 */
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 主要內容容器，包含個人介紹和連結區 -->
+    <main class="w-full max-w-sm mx-auto p-6 bg-white bg-opacity-80 rounded-3xl shadow-lg text-center fade-in">
+        
+        <!-- 個人介紹區 -->
+        <section>
+            <!-- 甜點圖示作為頭像 -->
+            <div class="text-7xl mb-4 p-4 rounded-full inline-block">
+                ☕️
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-stone-800 mb-2">
+                奶茶食刻
+            </h1>
+            
+            <p class="text-sm text-stone-600 font-medium tracking-wide leading-relaxed">
+                用溫暖的奶茶色，紀錄每一份手作的幸福。
+            </p>
+        </section>
+
+        <!-- 連結區塊，類似 Linktree 的風格 -->
+        <section class="mt-8 space-y-4">
+            <!-- IG 連結 -->
+            <a href="https://www.instagram.com/your_instagram_handle" target="_blank" class="btn block w-full bg-stone-500 hover:bg-caramel text-cream font-bold py-3 px-6 rounded-full transition-colors duration-200">
+                <span class="mr-2">📸</span> Instagram 手作日常
+            </a>
+            
+            <!-- Email 連結 -->
+            <a href="mailto:your_email@example.com" class="btn block w-full bg-stone-500 hover:bg-caramel text-cream font-bold py-3 px-6 rounded-full transition-colors duration-200">
+                <span class="mr-2">📧</span> 電子郵件與我聯繫
+            </a>
+            
+            <!-- GitHub 連結 -->
+            <a href="https://github.com/your_github_username" target="_blank" class="btn block w-full bg-stone-500 hover:bg-caramel text-cream font-bold py-3 px-6 rounded-full transition-colors duration-200">
+                <span class="mr-2">💻</span> GitHub 程式碼
+            </a>
+            
+            <!-- LinkedIn 連結 -->
+            <a href="https://www.linkedin.com/in/your_linkedin_profile" target="_blank" class="btn block w-full bg-stone-500 hover:bg-caramel text-cream font-bold py-3 px-6 rounded-full transition-colors duration-200">
+                <span class="mr-2">🧑‍💼</span> LinkedIn 專業檔案
+            </a>
+        </section>
+
+    </main>
+
+</body>
+</html>
